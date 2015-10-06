@@ -22,6 +22,7 @@ class Login extends CI_Controller {
 		die ();
 	}
 	public function entrar() {
+		
 		$usuario = $this->usuario_model->login ( $_POST ['email'], $_POST ['senha'] );
 		
 		if ($usuario) {
