@@ -7,7 +7,6 @@ class Login extends CI_Controller {
 	}
 	public function index() {
 		
-		// self::sair();
 		if ($this->usuario_model->usuarioLogado ()) {
 			self::logado ();
 		} else {
