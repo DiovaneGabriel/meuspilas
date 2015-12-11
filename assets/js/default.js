@@ -2,10 +2,19 @@ $(document).ready(function() {
 	$(".movimento").fancybox({
 
 		arrows: false,
-		width: '400',
-		height: '400',
 		mouseWheel: false,
 		loop: false,
+		
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		
 		keys:{	next : {},
 			    prev : {},
 			close  : [27], // escape key
