@@ -1,14 +1,12 @@
-<IfModule mod_rewrite.c>
-        RewriteEngine On
-        RewriteBase /
+# http://www.hostinger.com.br/forum/ajuda-ao-cliente/583-ajuda-com-htaccess.html
+# BEGIN WordPress
 
-        # Removes index.php from ExpressionEngine URLs
-        RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
-        RewriteCond %{REQUEST_URI} !/system/.* [NC]
-        RewriteRule (.*?)index\.php/*(.*) meuspilas/$1$2 [R=301,NE,L]
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 
-        # Directs all EE web requests through the site index file
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule ^(.*)$ meuspilas/index.php/$1 [L]
-</IfModule>
+
+# END WordPress
