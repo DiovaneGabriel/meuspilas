@@ -36,4 +36,7 @@ class Login extends CI_Controller {
 	public function sair() {
 		$this->usuario_model->logoutUsuario();
 	}
+	public function criar_conta(){
+		dump('x');
+	}
 }
