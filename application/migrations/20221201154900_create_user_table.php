@@ -12,11 +12,6 @@ class Migration_Create_user_table extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'familia_id' => array(
-                'type' => 'INT',
-                'constraint' => 10,
-                'unsigned' => TRUE
-            ),
             'nome' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
