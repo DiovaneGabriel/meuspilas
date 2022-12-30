@@ -1,6 +1,7 @@
 <?php $this->load->view('includes/head'); ?>
 
-<body class='login'>
+<body>
+<?php $this->load->view('includes/menu'); ?>
     <?php $this->load->view($this->view); ?>
     <?php $this->load->view('includes/footer'); ?>
 

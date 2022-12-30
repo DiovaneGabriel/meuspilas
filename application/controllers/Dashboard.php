@@ -9,6 +9,6 @@ class Dashboard extends MainController {
 		$this->load->model('usuario_model', '', TRUE);
 	}
 	public function index() {
-		$this->load->view('dashboard/index');
+		$this->load_view('dashboard/index');
 	}
 }

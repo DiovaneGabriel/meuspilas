@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form class="login" action="" method="POST">
     <input placeholder="Nome" name="nome" type="text" autofocus required>
     <input placeholder="Sobremone" name="sobrenome" type="text" required>
     <input placeholder="E-mail" name="email" type="email" required>

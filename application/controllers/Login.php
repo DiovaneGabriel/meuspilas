@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 				}
 			} else {
 				$this->view = 'login/index';
-				$this->load->view('login_template');
+				$this->load->view('template_login');
 			}
 		} else {
 			redirect(base_url('dashboard'));
@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 			$this->salvar_nova_conta();
 		} else {
 			$this->view = 'login/create';
-			$this->load->view('login_template');
+			$this->load->view('template_login');
 		}
 	}
 	private function salvar_nova_conta() {

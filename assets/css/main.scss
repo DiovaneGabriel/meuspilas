@@ -46,14 +46,66 @@ input {
 }
 
 .login {
-    padding-top: 128px;
-    form {
-        padding: 24px;
-        background-color: white;
-        border: solid 1px #ccc;
-        border-radius: 2px;
-        margin: auto;
-        width: 450px;
-        max-width: 80%;
+    padding: 24px;
+    background-color: white;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 128px;
+    width: 450px;
+    max-width: 80%;
+}
+
+.menu {
+    width: 100%;
+    height: 64px;
+    background-color: #ccc;
+    padding: 0 64px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        width: min-content;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) auto;
+
+        li {
+            a {
+                padding: 0 24px;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                background-color: #bbb;
+            }
+
+            &.active {
+                background-color: #ddd;
+            }
+        }
+    }
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: min-content;
+    border-radius: 2px;
+    padding: 8px 16px;
+
+    &.error {
+        background-color: #FA312B;
+    }
+
+    &.success {
+        background-color: #41CA4A;
+    }
+
+    p {
+        text-align: center;
     }
 }
