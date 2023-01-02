@@ -1,0 +1,1 @@
+<a class='btn' href="<?= $this->newUrl; ?>"><?= $this->newLabel; ?></a>

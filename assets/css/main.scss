@@ -1,3 +1,5 @@
+$primary-color: #41CA4A;
+
 * {
     color: #222;
     display: block;
@@ -19,8 +21,23 @@ title {
 
 a {
     width: min-content;
-    margin: 0 auto;
     text-decoration: none;
+
+    &.btn {
+        background-color: $primary-color;
+        border: solid 1px darken($primary-color, 20);
+        border-radius: 2px;
+        padding: 4px 8px;
+        grid-area: 1 / col4-start / last-line / 6;
+
+        &:hover {
+            background-color: darken($primary-color, 20);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 input {
@@ -54,10 +71,14 @@ input {
     margin-top: 128px;
     width: 450px;
     max-width: 80%;
+
+    a {
+        margin: 0 auto;
+    }
 }
 
 .menu {
-    width: 100%;
+    width: calc(100% - 128px);
     height: 64px;
     background-color: #ccc;
     padding: 0 64px;
@@ -71,20 +92,32 @@ input {
         grid-template-columns: repeat(3, 1fr) auto;
 
         li {
-            a {
-                padding: 0 24px;
-                text-transform: uppercase;
+            div {
+                display: flex;
+                height: 100%;
+
+                a {
+                    margin: auto;
+                    padding: 0 24px;
+                    text-transform: uppercase;
+                }
             }
 
             &:hover {
-                background-color: #bbb;
+                background-color: #ddd;
             }
 
             &.active {
-                background-color: #ddd;
+                background-color: #bbb;
             }
         }
     }
+}
+
+.container {
+    padding: 32px 64px;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
 }
 
 .message {

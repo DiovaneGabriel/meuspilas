@@ -6,7 +6,6 @@ require_once 'MainController.php';
 class Dashboard extends MainController {
 	function __construct() {
 		parent::__construct('dashboard');
-		$this->load->model('usuario_model', '', TRUE);
 	}
 	public function index() {
 		$this->load_view('dashboard/index');
